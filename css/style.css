@@ -8,9 +8,14 @@
     --main-color: #0065FC;
     --main-bg-color: #F2F2F2;
     --filter-bg-color: #DEEBFF;
+    --full-black: #000000;
+    --full-white: #FFFFFF;
 
     /* Font sizes */
-    --base-size: 1rem;
+    --title-size: 1.375rem; /* 22px */
+    --filter-size: 1.125rem; /* 18px */
+    --base-size: 1rem; /* 16px */
+    --small-size: 0.875rem; /* 14px */
 }
 
 .fa-solid {
@@ -61,6 +66,11 @@ a {
     text-decoration: none;
 }
 
+p {
+    font-size: var(--base-size);
+    margin: 10px 0;
+}
+
 .header-logo {
     width: 61px;
     height: 19px;
@@ -70,6 +80,66 @@ a {
 .section-title {
     margin: 0;
     font-size: 22px;
+}
+
+.search-bar {
+    display: flex;
+    margin: 35px 0;
+}
+
+.search-form {
+    color:var(--main-bg-color);
+    outline:solid 1px;
+    border-radius: 15px;
+    align-items: center;
+    max-height: 50px;
+    display: flex;
+}
+
+.search-icon-area {
+    width: 50px;
+    height: 50px;
+    background-color: var(--main-bg-color);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 15px 0 0 15px;
+    border:none;
+}
+
+.search-icon {
+    color: var(--full-black);
+    width: 14px;
+    height: 18px;
+}
+
+.search-input {
+    border: none;
+    font-size: var(--filter-size);
+    font-weight: bold;
+    padding-left: 24px;
+}
+
+.search-input::placeholder {
+    color: var(--full-black);
+}
+
+.search-button {
+    background-color: var(--main-color);
+    padding: 14px;
+    border: none;
+    font-size: var(--filter-size);
+    font-weight: bold;
+    border-radius: 0 15px 15px 0;
+}
+
+.search-text {
+    color: var(--full-white);
+}
+
+.search-magnifier {
+    color: var(--full-white); /* géré au niveau de l'élément pour overwrite la classe .fa*/
+    display: none; /* pour toggle avec un media query en version mobile (ici, desktop first)*/
 }
 
 .card {
