@@ -13,7 +13,8 @@
 
     /* Font sizes */
     --title-size: 1.375rem; /* 22px */
-    --filter-size: 1.125rem; /* 18px */
+    --xlarge-size: 1.125rem; /* 18px */
+    --large-size: 1.063rem; /* 17px */
     --base-size: 1rem; /* 16px */
     --small-size: 0.875rem; /* 14px */
 }
@@ -78,7 +79,7 @@ p {
 }
 
 .section-title {
-    margin: 0;
+    margin: 30px 0 0 0;
     font-size: 22px;
 }
 
@@ -87,10 +88,14 @@ p {
     margin: 35px 0;
 }
 
+.full-search-form {
+    display: flex;
+}
+
 .search-form {
     color:var(--main-bg-color);
     outline:solid 1px;
-    border-radius: 15px;
+    border-radius: 15px 0 0 15px;
     align-items: center;
     max-height: 50px;
     display: flex;
@@ -115,9 +120,10 @@ p {
 
 .search-input {
     border: none;
-    font-size: var(--filter-size);
+    font-size: var(--xlarge-size);
     font-weight: bold;
-    padding-left: 24px;
+    padding: 0 0 0 24px;
+    width:171px;
 }
 
 .search-input::placeholder {
@@ -126,11 +132,13 @@ p {
 
 .search-button {
     background-color: var(--main-color);
-    padding: 14px;
+    height: 50px;
+    outline: solid 1px var(--main-color);
+    outline-offset: 0px; /* permet de corriger l'écart entre l'outline et le border-radius */
     border: none;
-    font-size: var(--filter-size);
     font-weight: bold;
     border-radius: 0 15px 15px 0;
+    padding: 0 16px;
 }
 
 .search-text {
@@ -141,6 +149,68 @@ p {
     color: var(--full-white); /* géré au niveau de l'élément pour overwrite la classe .fa*/
     display: none; /* pour toggle avec un media query en version mobile (ici, desktop first)*/
 }
+
+.filters {
+    display:flex;
+    gap: 15px;
+    margin-bottom: 35px;
+}
+
+.filter-options {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    row-gap: 15px; /* séparé en anticipation mobile version */
+    column-gap: 15px; /* séparé en anticipation mobile version */
+}
+
+.filter-options > button {
+    font-size: var(--large-size);
+    font-weight: bold;
+    border: solid var(--main-bg-color) 2px;
+    border-radius: 25px;
+    background-color: transparent;
+    height: 50px;
+    padding: 0 19px;
+}
+
+.filter-options > button:hover {
+    background-color: var(--filter-bg-color);
+}
+
+
+.filter-options > button > i {
+    width: 22px;
+    height: 22px;
+}
+
+.xlarge {
+    font-size: var(--xlarge-size);
+}
+
+.infobulle {
+    display:flex;
+    align-items: center;
+    gap: 10px;
+    height: 24px;
+    margin-bottom: 35px; /* ce 35 px est à factoriser, on le trouve partout */
+}
+
+.infobulle-logo {
+    width: 24px;
+    height: 24px;
+    border: solid var(--main-bg-color) 1px;
+    border-radius: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 10px;
+}
+
+
+
+
+
 
 .card {
     background-color: white;
