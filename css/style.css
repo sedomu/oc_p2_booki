@@ -64,7 +64,7 @@ body {
     box-sizing: border-box;
 }
 
-h2 {
+h1, h2, h3 {
     margin: 0;
 }
 
@@ -84,8 +84,11 @@ p {
     margin: 30px 0;
 }
 
+.section-filtres {
+    padding: 30px 0 35px 0;
+}
+
 .section-title {
-    margin: 30px 0 0 0;
     font-size: 22px;
 }
 
@@ -107,9 +110,6 @@ p {
     display: flex;
     border-width: 1px 0;
     border-style: solid;
-
-
-    
 }
 
 .search-icon-area {
@@ -207,7 +207,6 @@ p {
     align-items: center;
     gap: 10px;
     height: 24px;
-    margin-bottom: 35px; /* ce 35 px est à factoriser, on le trouve partout */
 }
 
 .infobulle-logo {
@@ -221,11 +220,7 @@ p {
     font-size: 10px;
 }
 
-
-
-
-
-
+/* Cards */
 .card {
     background-color: white;
     border-radius: 20px;
@@ -265,6 +260,66 @@ p {
 /****** Hebergements ***********/
 .hebergements {
     width: 65%;
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+}
+
+.hebergements-title {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.hebergements-cards {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 30px;
+}
+
+.hebergements-cards a {
+    flex: calc( 100% / 3 - 30px );
+}
+
+.hebergements-cards .card {
+    display: flex;
+    flex-direction: column;
+}
+
+.hebergements-cards img {
+    width: 100%;
+    height: 124px;
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
+}
+
+.hebergements-cards .card-content {
+    width: 100%;
+    padding-left: 15px;
+    padding-right: 15px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    box-sizing: border-box;
+}
+
+.hebergements-cards .card-title {
+    margin-top: 9px;
+    margin-bottom: 8px;
+}
+
+.hebergements-cards .card-subtitle {
+    margin: 0;
+}
+
+.hebergements-cards .card-rating {
+    margin-top: 8px;
+    margin-bottom: 10px;
+}
+
+.more {
+    font-size: var(--xlarge-size);
+    font-weight: bold;
 }
 
 /****** Populaires ***********/
@@ -368,6 +423,8 @@ p {
     /* header */
     header {
         flex-direction: column;
+        padding: 0;
+        align-items: center;
     }
 
     nav {
@@ -376,18 +433,26 @@ p {
         justify-content: space-between;
     }
 
-    .nav-item {
+    .nav-item, .nav-item:hover{
         flex: 1;
         text-align: center;
-    }
-
-    .nav-item:hover {
         border-bottom-style: solid;
         border-top-style: none;
-        padding: 16px 0 14px 0;
+        border-color: var(--main-bg-color);
+        padding: 16px 0;
+        border-width: 2px;
+    }
+
+    /* en version mobile = tactile, donc hover n'a aucun intérêt. Davantage clair en appliquant le style de barre sur la classe .active */
+    .nav-item.active { 
+        border-color: var(--main-color);
     }
 
     /* search bar */
+    .section-filtres {
+        padding: 30px 20px 25px 20px;
+    }
+
     .search-text {
         display: none;
     }
@@ -439,5 +504,50 @@ p {
         margin-top: 35px;
         margin-bottom: 35px;
     }
+
+    /* hebergements-and-populaires section */
+    .main-container{
+        padding: 0;
+    }
     
+    .hebergements-and-populaires {
+        flex-direction: column-reverse;
+        gap: 15px;
+    }
+
+    section.hebergements {
+        background-color: var(--full-white);
+        padding: 20px;
+    }
+    
+    .hebergements-cards {
+        flex-direction: column;
+        flex-wrap: nowrap;
+    }
+
+    section.populaires {
+        background-color: var(--main-bg-color);
+        border-radius: 0;
+    }
+
+    .populaires-cards {
+        flex-direction: column;
+    }
+
+    .populaires-cards a {
+        width: 100%;
+    }
+
+    .populaires-cards .card {
+        margin-top: 15px;
+    }
+
+    .populaires {
+        margin: 0;
+    }
+
+    .hebergements {
+        gap: 15px;
+    }
+
 }
