@@ -68,6 +68,10 @@ h1, h2, h3 {
     margin: 0;
 }
 
+h3 {
+    font-size: var(--xlarge-size);
+}
+
 a {
     color: inherit;
     text-decoration: none;
@@ -414,6 +418,28 @@ p {
     padding: 20px 19px;
 }
 
+/****** Footer ***********/
+footer {
+    display: flex;
+    justify-content: space-between;
+    padding: 20px;
+    background-color: var(--main-bg-color);
+}
+
+.footer-section {
+    flex: 1;
+}
+
+.footer-section h3,
+.footer-item {
+    margin-bottom: 15px;
+}
+
+footer ul {
+    list-style-type: none;
+    padding: 0;
+}
+
 
 /* Le code ci-dessous correspond à la version responsive uniquement */
 
@@ -620,6 +646,13 @@ p {
 
     .card-txt.activity {
         padding: 20px 19px;
+    }
+
+    /* footer */
+    footer {
+        flex-direction: column;
+        gap: 35px;
+        padding: 30px 30px 15px 30px;
     }
 
 }
