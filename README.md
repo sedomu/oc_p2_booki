@@ -10,7 +10,7 @@ terminé le 20241127
 
 ## showroom
 
-[visualiser le site sur github pages](https://sedomu.github.io/booki-starter-code/)
+<a href="https://sedomu.github.io/booki-starter-code/" target="_blank">visualiser le projet sur github pages</a>
 
 ## notes
 
