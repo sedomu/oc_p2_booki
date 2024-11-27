@@ -569,7 +569,8 @@ footer ul {
 
     .search-input {
         flex: 1;
-        width:0;
+        width: 0;
+        min-width: 0;
     }
 
     .search-elements {
