@@ -415,7 +415,7 @@ section {
     justify-content: space-between;
     overflow: hidden;
     gap: 30px;
-    padding: 0 30px 30px 30px;
+    padding: 30px;
 }
 
 .activity.card {
@@ -435,6 +435,10 @@ section {
 
 .card-txt.activity {
     padding: 20px 19px;
+}
+
+.activities > section {
+    gap: 0;
 }
 
 /**************** FOOTER ****************/
@@ -673,7 +677,6 @@ footer ul {
     .activities-cards {
         flex-direction: column;
         gap: 15px;
-        padding-top: 30px;
     }
 
     .card-content.activity {
@@ -682,10 +685,6 @@ footer ul {
 
     .card-txt.activity {
         padding: 20px 19px;
-    }
-
-    .activities > section {
-        gap: 0;
     }
 
     /* footer */
