@@ -393,7 +393,6 @@ nav {
 /**************** ACTIVITIES ****************/
 .activities,
 section {
-    /* margin-top: 30px; */
     box-sizing: border-box;
     display: flex;
     flex-direction: column;
@@ -674,6 +673,7 @@ footer ul {
     .activities-cards {
         flex-direction: column;
         gap: 15px;
+        padding-top: 30px;
     }
 
     .card-content.activity {
@@ -682,6 +682,10 @@ footer ul {
 
     .card-txt.activity {
         padding: 20px 19px;
+    }
+
+    .activities > section {
+        gap: 0;
     }
 
     /* footer */
