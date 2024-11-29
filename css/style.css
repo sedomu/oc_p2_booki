@@ -350,11 +350,6 @@ nav {
     align-items: center;
 }
 
-.populaires-cards > article {
-    /* margin-top: 15px; */
-    /* width: 100%; */
-}
-
 .populaires-cards {
     display: flex;
     flex-direction: column;
