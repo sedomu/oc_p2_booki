@@ -163,6 +163,10 @@ nav {
     border: 1px solid var(--main-color);
 }
 
+.search-button:hover {
+    cursor: pointer;
+}
+
 .search-text {
     color: var(--full-white);
 }
@@ -201,6 +205,7 @@ nav {
 
 .filter-options > button:hover {
     background-color: var(--filter-bg-color);
+    cursor: pointer;
 }
 
 .filter-options > button > i {
@@ -491,6 +496,10 @@ footer ul {
         flex-direction: row;
         justify-content: space-between;
         gap: 20px;
+    }
+
+    .populaires-cards > a {
+        flex: 1;
     }
 
     .populaires-cards .card-subtitle {
